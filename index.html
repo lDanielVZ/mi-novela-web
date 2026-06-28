@@ -10,106 +10,242 @@
 
 <style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#eceff1;
+
+font-family:Arial, Helvetica, sans-serif;
+
+background:linear-gradient(135deg,#edf2f7,#d7e1ec);
+
+color:#333;
+
 }
 
-.contenedor{
-    width:90%;
-    max-width:1000px;
-    margin:40px auto;
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,.15);
+header{
+
+background:#1f2937;
+
+color:white;
+
+padding:25px;
+
+text-align:center;
+
+box-shadow:0 4px 15px rgba(0,0,0,.2);
+
 }
 
-h1{
-    text-align:center;
-    color:#2c3e50;
-    margin-bottom:40px;
+header h1{
+
+font-size:38px;
+
 }
 
-.novela{
-    display:flex;
-    gap:40px;
-    align-items:flex-start;
-    flex-wrap:wrap;
+header p{
+
+margin-top:10px;
+
+font-size:18px;
+
+opacity:.9;
+
 }
 
-.novela img{
-    width:280px;
-    border-radius:12px;
-    box-shadow:0 8px 25px rgba(0,0,0,.25);
+main{
+
+max-width:1200px;
+
+margin:auto;
+
+padding:40px 20px;
+
+}
+
+.biblioteca{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+}
+
+.tarjeta{
+
+background:white;
+
+border-radius:18px;
+
+overflow:hidden;
+
+box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+transition:.35s;
+
+}
+
+.tarjeta:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 15px 30px rgba(0,0,0,.2);
+
+}
+
+.tarjeta img{
+
+width:100%;
+
+height:360px;
+
+object-fit:cover;
+
 }
 
 .info{
-    flex:1;
-    min-width:300px;
+
+padding:20px;
+
+text-align:center;
+
 }
 
 .info h2{
-    font-size:36px;
-    margin-top:0;
-    color:#222;
+
+font-size:22px;
+
+margin-bottom:12px;
+
 }
 
 .info p{
-    font-size:18px;
+
+margin:6px 0;
+
+font-size:16px;
+
 }
 
-.boton{
-    display:inline-block;
-    background:#28a745;
-    color:white;
-    text-decoration:none;
-    padding:15px 30px;
-    border-radius:10px;
-    font-size:20px;
-    margin:8px 0;
-    transition:.3s;
+.descargar{
+
+display:inline-block;
+
+margin-top:15px;
+
+padding:14px 25px;
+
+background:#2ecc71;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:8px;
+
+font-size:18px;
+
+transition:.3s;
+
 }
 
-.boton:hover{
-    background:#218838;
+.descargar:hover{
+
+background:#27ae60;
+
+}
+
+.donacion{
+
+margin-top:70px;
+
+background:white;
+
+padding:40px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+}
+
+.donacion h2{
+
+font-size:34px;
+
+margin-bottom:20px;
+
+}
+
+.donacion p{
+
+font-size:18px;
+
+line-height:1.8;
+
+margin-bottom:20px;
+
 }
 
 .donar{
-    background:#0070ba;
+
+background:#0070ba;
+
+color:white;
+
+font-size:20px;
+
+padding:18px 35px;
+
+border:none;
+
+border-radius:10px;
+
+cursor:pointer;
+
+transition:.3s;
+
 }
 
 .donar:hover{
-    background:#005ea6;
-}
 
-.descripcion{
-    margin-top:60px;
-    font-size:18px;
-    line-height:1.8;
+background:#005ea6;
+
 }
 
 footer{
-    margin-top:60px;
-    text-align:center;
-    border-top:1px solid #ddd;
-    padding-top:30px;
+
+margin-top:50px;
+
+padding:25px;
+
+text-align:center;
+
+color:#666;
+
+font-size:15px;
+
 }
 
-@media(max-width:700px){
+@media(max-width:768px){
 
-.novela{
-    flex-direction:column;
-    align-items:center;
+header h1{
+
+font-size:30px;
+
 }
 
-.info{
-    text-align:center;
-}
+.tarjeta img{
 
-.novela img{
-    width:220px;
+height:300px;
+
 }
 
 }
@@ -120,82 +256,152 @@ footer{
 
 <body>
 
-<div class="contenedor">
+<header>
 
 <h1>📚 Mi Biblioteca de Novelas Ligeras</h1>
 
-<div class="novela">
+<p>Descarga gratuitamente todos los volúmenes disponibles.</p>
 
-<img src="PORTADA.png" alt="Portada">
+</header>
+
+<main>
+
+<div class="biblioteca">
+<div class="tarjeta">
+
+<img src="PORTADA.png" alt="Volumen 1">
 
 <div class="info">
 
-<h2>Ore wo Suki Nano wa Omae Dake ka yo</h2>
+<h2>Volumen 1</h2>
 
-<p>📖 Idioma: Español</p>
+<p>📖 Español</p>
 
-<p>📄 Formato: PDF</p>
+<p>📄 PDF</p>
 
-<p>⬇ Descarga gratuita</p>
+<a class="descargar" href="Oresuki - Volumen 1.pdf" download>
 
-<a class="boton" href="Oresuki - Volumen 1.pdf" download>
-📥 Descargar Volumen 1
-</a>
+📥 Descargar
 
-<br>
-
-<a class="boton" href="Oresuki - Volumen 2.pdf" download>
-📥 Descargar Volumen 2
-</a>
-
-<br>
-
-<a class="boton" href="Oresuki - Volumen 3.pdf" download>
-📥 Descargar Volumen 3
-</a>
-
-<br>
-
-<a class="boton" href="Oresuki volumen 4.pdf" download>
-📥 Descargar Volumen 4
 </a>
 
 </div>
 
 </div>
 
-<div class="descripcion">
 
-<h2>Sobre la novela</h2>
+
+<div class="tarjeta">
+
+<img src="PORTADA.png" alt="Volumen 2">
+
+<div class="info">
+
+<h2>Volumen 2</h2>
+
+<p>📖 Español</p>
+
+<p>📄 PDF</p>
+
+<a class="descargar" href="Oresuki - Volumen 2.pdf" download>
+
+📥 Descargar
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<div class="tarjeta">
+
+<img src="PORTADA.png" alt="Volumen 3">
+
+<div class="info">
+
+<h2>Volumen 3</h2>
+
+<p>📖 Español</p>
+
+<p>📄 PDF</p>
+
+<a class="descargar" href="Oresuki - Volumen 3.pdf" download>
+
+📥 Descargar
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<div class="tarjeta">
+
+<img src="PORTADA.png" alt="Volumen 4">
+
+<div class="info">
+
+<h2>Volumen 4</h2>
+
+<p>📖 Español</p>
+
+<p>📄 PDF</p>
+
+<a class="descargar" href="Oresuki volumen 4.pdf" download>
+
+📥 Descargar
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="donacion">
+
+<h2>❤️ Apoya este proyecto</h2>
 
 <p>
-Kisaragi Amatsuyu, conocido como Joro, cree que por fin tendrá la oportunidad de conquistar a la chica que le gusta. Sin embargo, una serie de confesiones inesperadas y divertidos malentendidos lo arrastran a una historia llena de romance, comedia y sorprendentes giros.
+
+Todas las novelas de esta biblioteca son completamente gratuitas.
+
 </p>
 
+<p>
+
+Si deseas apoyar futuras traducciones y el mantenimiento del sitio,
+
+puedes hacer una donación mediante PayPal.
+
+</p>
+
+<button class="donar" onclick="donar()">
+
+❤️ Donar con PayPal
+
+</button>
+
 </div>
+
+</main>
+
+
 
 <footer>
 
-<h2>❤️ ¿Te gustó el proyecto?</h2>
-
-<p>
-Todas las novelas de esta biblioteca son completamente gratuitas.
-</p>
-
-<p>
-Si deseas apoyar futuras traducciones y el mantenimiento del sitio,
-puedes hacer una donación mediante PayPal.
-</p>
-
-<br>
-
-<button class="boton donar" onclick="donar()">
-❤️ Donar con PayPal
-</button>
+© 2026 Mi Biblioteca de Novelas Ligeras
 
 </footer>
 
-</div>
+
 
 <script>
 
