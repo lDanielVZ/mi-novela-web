@@ -6,140 +6,111 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mi Biblioteca de Novelas</title>
+<title>Mi Biblioteca de Novelas Ligeras</title>
 
 <style>
 
 body{
-
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#eceff1;
-
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#eceff1;
 }
 
 .contenedor{
-
-width:90%;
-max-width:1000px;
-
-margin:40px auto;
-
-background:white;
-
-padding:30px;
-
-border-radius:15px;
-
-box-shadow:0px 5px 20px rgba(0,0,0,0.15);
-
+    width:90%;
+    max-width:1000px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
 }
 
 h1{
-
-text-align:center;
-
-color:#2c3e50;
-
-margin-bottom:40px;
-
+    text-align:center;
+    color:#2c3e50;
+    margin-bottom:40px;
 }
 
 .novela{
-
-display:flex;
-
-gap:40px;
-
-align-items:center;
-
-flex-wrap:wrap;
-
+    display:flex;
+    gap:40px;
+    align-items:flex-start;
+    flex-wrap:wrap;
 }
 
 .novela img{
-
-width:280px;
-
-border-radius:12px;
-
-box-shadow:0px 8px 25px rgba(0,0,0,.25);
-
+    width:280px;
+    border-radius:12px;
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
 }
 
 .info{
-
-flex:1;
-
-min-width:300px;
-
+    flex:1;
+    min-width:300px;
 }
 
 .info h2{
-
-font-size:36px;
-
-margin-top:0;
-
-color:#222;
-
+    font-size:36px;
+    margin-top:0;
+    color:#222;
 }
 
 .info p{
-
-font-size:18px;
-
-line-height:1.7;
-
+    font-size:18px;
 }
 
-.precio{
-
-font-size:42px;
-
-font-weight:bold;
-
-color:#27ae60;
-
-margin:30px 0;
-
+.boton{
+    display:inline-block;
+    background:#28a745;
+    color:white;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:10px;
+    font-size:20px;
+    margin:8px 0;
+    transition:.3s;
 }
 
-button{
-
-background:#0070ba;
-
-color:white;
-
-font-size:22px;
-
-padding:18px 40px;
-
-border:none;
-
-border-radius:10px;
-
-cursor:pointer;
-
-transition:.3s;
-
+.boton:hover{
+    background:#218838;
 }
 
-button:hover{
+.donar{
+    background:#0070ba;
+}
 
-background:#005ea6;
-
-transform:scale(1.03);
-
+.donar:hover{
+    background:#005ea6;
 }
 
 .descripcion{
+    margin-top:60px;
+    font-size:18px;
+    line-height:1.8;
+}
 
-margin-top:50px;
+footer{
+    margin-top:60px;
+    text-align:center;
+    border-top:1px solid #ddd;
+    padding-top:30px;
+}
 
-font-size:18px;
+@media(max-width:700px){
 
-line-height:1.8;
+.novela{
+    flex-direction:column;
+    align-items:center;
+}
+
+.info{
+    text-align:center;
+}
+
+.novela img{
+    width:220px;
+}
 
 }
 
@@ -155,23 +126,39 @@ line-height:1.8;
 
 <div class="novela">
 
-<img src="PORTADA.png">
+<img src="PORTADA.png" alt="Portada">
 
 <div class="info">
 
-<h2>Ore wo Suki Nano wa Omae Dake ka yo<br>Volumen 1</h2>
+<h2>Ore wo Suki Nano wa Omae Dake ka yo</h2>
 
 <p>📖 Idioma: Español</p>
 
 <p>📄 Formato: PDF</p>
 
-<p>⬇ Descarga digital</p>
+<p>⬇ Descarga gratuita</p>
 
-<div class="precio">$1.00 USD</div>
+<a class="boton" href="Oresuki - Volumen 1.pdf" download>
+📥 Descargar Volumen 1
+</a>
 
-<button onclick="comprar()">
-🛒 Comprar con PayPal
-</button>
+<br>
+
+<a class="boton" href="Oresuki - Volumen 2.pdf" download>
+📥 Descargar Volumen 2
+</a>
+
+<br>
+
+<a class="boton" href="Oresuki - Volumen 3.pdf" download>
+📥 Descargar Volumen 3
+</a>
+
+<br>
+
+<a class="boton" href="Oresuki volumen 4.pdf" download>
+📥 Descargar Volumen 4
+</a>
 
 </div>
 
@@ -182,18 +169,37 @@ line-height:1.8;
 <h2>Sobre la novela</h2>
 
 <p>
-
-Kisaragi Amatsuyu, conocido como Joro, cree que por fin tendrá la oportunidad de conquistar a la chica que le gusta.
-
+Kisaragi Amatsuyu, conocido como Joro, cree que por fin tendrá la oportunidad de conquistar a la chica que le gusta. Sin embargo, una serie de confesiones inesperadas y divertidos malentendidos lo arrastran a una historia llena de romance, comedia y sorprendentes giros.
 </p>
 
 </div>
+
+<footer>
+
+<h2>❤️ ¿Te gustó el proyecto?</h2>
+
+<p>
+Todas las novelas de esta biblioteca son completamente gratuitas.
+</p>
+
+<p>
+Si deseas apoyar futuras traducciones y el mantenimiento del sitio,
+puedes hacer una donación mediante PayPal.
+</p>
+
+<br>
+
+<button class="boton donar" onclick="donar()">
+❤️ Donar con PayPal
+</button>
+
+</footer>
 
 </div>
 
 <script>
 
-function comprar(){
+function donar(){
 
 window.location.href="https://www.paypal.com/ncp/payment/BL7Y972HTB39W";
 
