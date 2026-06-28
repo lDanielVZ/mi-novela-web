@@ -1,29 +1,207 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Mi Biblioteca de Novelas</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mi Biblioteca de Novelas</title>
+
+<style>
+
+body{
+
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#eceff1;
+
+}
+
+.contenedor{
+
+width:90%;
+max-width:1000px;
+
+margin:40px auto;
+
+background:white;
+
+padding:30px;
+
+border-radius:15px;
+
+box-shadow:0px 5px 20px rgba(0,0,0,0.15);
+
+}
+
+h1{
+
+text-align:center;
+
+color:#2c3e50;
+
+margin-bottom:40px;
+
+}
+
+.novela{
+
+display:flex;
+
+gap:40px;
+
+align-items:center;
+
+flex-wrap:wrap;
+
+}
+
+.novela img{
+
+width:280px;
+
+border-radius:12px;
+
+box-shadow:0px 8px 25px rgba(0,0,0,.25);
+
+}
+
+.info{
+
+flex:1;
+
+min-width:300px;
+
+}
+
+.info h2{
+
+font-size:36px;
+
+margin-top:0;
+
+color:#222;
+
+}
+
+.info p{
+
+font-size:18px;
+
+line-height:1.7;
+
+}
+
+.precio{
+
+font-size:42px;
+
+font-weight:bold;
+
+color:#27ae60;
+
+margin:30px 0;
+
+}
+
+button{
+
+background:#0070ba;
+
+color:white;
+
+font-size:22px;
+
+padding:18px 40px;
+
+border:none;
+
+border-radius:10px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+background:#005ea6;
+
+transform:scale(1.03);
+
+}
+
+.descripcion{
+
+margin-top:50px;
+
+font-size:18px;
+
+line-height:1.8;
+
+}
+
+</style>
+
 </head>
+
 <body>
 
-  <h1>📚 Mi Biblioteca de Novelas Ligeras</h1>
+<div class="contenedor">
 
-<h2>Ore wo Suki Nano wa Omae Dake ka yo - Volumen 1</h2>
+<h1>📚 Mi Biblioteca de Novelas Ligeras</h1>
+
+<div class="novela">
+
+<img src="portada.png">
+
+<div class="info">
+
+<h2>Ore wo Suki Nano wa Omae Dake ka yo<br>Volumen 1</h2>
+
+<p>📖 Idioma: Español</p>
+
+<p>📄 Formato: PDF</p>
+
+<p>⬇ Descarga digital</p>
+
+<div class="precio">$1.00 USD</div>
+
+<button onclick="comprar()">
+🛒 Comprar con PayPal
+</button>
+
+</div>
+
+</div>
+
+<div class="descripcion">
+
+<h2>Sobre la novela</h2>
 
 <p>
-Novela ligera en formato PDF.<br>
-Idioma: Español<br>
-Formato: PDF<br>
-Precio: $1 USD
+
+Aquí puedes escribir una descripción interesante de la novela para que
+los lectores sepan de qué trata.
+
 </p>
 
-  <button onclick="comprar()">Comprar y Descargar</button>
+</div>
 
-  <script>
-    function comprar() {
-      window.location.href = "https://www.paypal.com/ncp/payment/BL7Y972HTB39W";
-    }
-  </script>
+</div>
+
+<script>
+
+function comprar(){
+
+window.location.href="https://www.paypal.com/ncp/payment/BL7Y972HTB39W";
+
+}
+
+</script>
 
 </body>
+
 </html>
